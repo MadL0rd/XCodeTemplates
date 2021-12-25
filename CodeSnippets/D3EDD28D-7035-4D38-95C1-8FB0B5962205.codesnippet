@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>class</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class &lt;#ViewName#&gt;: UIView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupView()
+    }
+
+    // MARK: - Private setup methods
+    
+    private func setupView() {
+        
+        makeConstraints()
+    }
+    
+    private func makeConstraints() {
+        NSLayoutConstraint.activate([
+            
+        ])
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D3EDD28D-7035-4D38-95C1-8FB0B5962205</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIView subclass</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

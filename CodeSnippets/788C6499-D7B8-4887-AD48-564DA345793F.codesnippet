@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>responseClosureDefault</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>.response { response in
+    
+    switch response.result {
+    case .success:
+        guard let data = response.data,
+              let parcedData: &lt;# Codable data class #&gt; = DataParser.parse(data: data)
+        else { completion(.failure(.cannotParceData)); return }
+        completion(.success(parcedData))
+        
+    case .failure:
+        if let code = response.error?.responseCode,
+           let error = NetworkServiceError(rawValue: code) {
+            completion(.failure(error))
+        }
+        else {
+            completion(.failure(.unknown))
+            return
+        }
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>788C6499-D7B8-4887-AD48-564DA345793F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Default response closure</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
