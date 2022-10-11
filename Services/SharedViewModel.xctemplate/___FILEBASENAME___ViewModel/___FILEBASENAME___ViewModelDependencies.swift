@@ -2,7 +2,7 @@ ___FILEHEADER___
 
 import Foundation
 
-extension ___VARIABLE_productName:identifier___ViewModel: DependencyObjectShared {
+extension ___VARIABLE_productName:identifier___ViewModel: SharedViewModel {
     
 }
 

@@ -2,10 +2,8 @@ ___FILEHEADER___
 
 import Alamofire
 
-class ___VARIABLE_productName:identifier___NetworkService: NetworkService {
-    
-    static let shared: ___VARIABLE_productName:identifier___NetworkServiceProtocol = ___VARIABLE_productName:identifier___NetworkService()
-    
+class ___VARIABLE_productName:identifier___NetworkService: NetworkService, SharedService {
+        
     private let requestBuilder = ___VARIABLE_productName:identifier___RequestBuilder.self
 }
 

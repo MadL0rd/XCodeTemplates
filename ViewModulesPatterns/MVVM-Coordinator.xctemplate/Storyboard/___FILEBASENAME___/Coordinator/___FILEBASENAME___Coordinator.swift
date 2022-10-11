@@ -13,12 +13,12 @@ final class ___VARIABLE_productName:identifier___Coordinator: DefaultCoordinator
         let viewModel = ___VARIABLE_productName:identifier___ViewModel()
         let coordinator = ___VARIABLE_productName:identifier___Coordinator()
 
-        coordinator.transition = view
-
         view.viewModel = viewModel
         view.coordinator = coordinator
-           
-        SharedDependenciesManager.injectDependencies(for: viewModel)
+
+        coordinator.transition = view
+        
+        ViewModelsSingletoneAccounter.injectDependencies(for: viewModel)
         
         if let configuration = configuration {
             configuration(viewModel)

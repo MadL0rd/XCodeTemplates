@@ -14,7 +14,7 @@ final class ___VARIABLE_productName:identifier___Coordinator: DefaultCoordinator
 
         coordinator.transition = view
         
-        SharedDependenciesManager.injectDependencies(for: viewModel)
+        ViewModelsSingletoneAccounter.injectDependencies(for: viewModel)
         
         if let configuration = configuration {
             configuration(viewModel)
